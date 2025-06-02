@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: "top 90%",
                 end: "bottom 80%",
                 scrub: 0.5,
-                markers: true
+                markers: false
             }
         }
     );
