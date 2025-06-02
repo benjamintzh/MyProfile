@@ -1,0 +1,594 @@
+:root {
+    --background--colour: #1E2527;
+    --Ftext--colour: #E6E8EA;
+    --Stext--colour: #BFC9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4em;
+    z-index: 999;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: var(--Ftext--colour);
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--Ftext--colour);
+    padding: 0 1em;
+    font-family: "HK Guise";
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo {
+    color: var(--Ftext--colour);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Cosi Times";
+    padding: 1em;
+    z-index: 500; /* Lowered to avoid overlapping the menu */
+    font-size: 2rem;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background--colour);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    width: 100%;
+    min-height: 120vh;
+    background: var(--background--colour);
+    position: relative;
+    padding: 4em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+
+.video-section {
+    flex: 0 0 auto;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--Stext--colour);
+}
+
+.reveal-line {
+    display: inline-block;
+    width: 100%;
+}
+
+.education-section {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background--colour);
+    position: relative;
+    overflow: visible;
+}
+
+.education-section .container {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+}
+
+.section-title {
+    color: var(--Ftext--colour);
+    font-family: "Cosi Times";
+    font-size: 3rem;
+    text-align: left;
+    position: absolute;
+    left: 5rem;
+    top: 6rem;
+    z-index: 10;
+}
+
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+}
+
+.education-card {
+    background: #2A3235;
+    border-radius: 15px;
+    padding: 2em;
+    width: 100%;
+    max-width: 700px;
+    height: 80vh;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 2vh;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.education-card .card-title {
+    color: var(--Ftext--colour);
+    font-family: "HK Guise";
+    font-size: 2rem;
+    margin-bottom: 0.75em;
+}
+
+.education-card .card-title span {
+    font-size: 1.5rem;
+    color: #D3D8E0;
+}
+
+.education-card .card-text {
+    color: var(--Stext--colour);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.education-card img {
+    max-width: 20%;
+    max-height: 25%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1em;
+}
+
+/* Laptop View (1024px to 1279px) */
+@media (max-width: 1279px) {
+    .nav {
+        height: 80px;
+        padding: 0 2em;
+    }
+
+    a {
+        font-size: 11px;
+        padding: 0 0.8em;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        padding: 0.8em;
+        z-index: 500;
+    }
+
+    .container {
+        min-height: 90vh;
+    }
+
+    .hero-video-container {
+        width: 100%;
+    }
+
+    .content {
+        padding: 3em 1.5em;
+        gap: 3em;
+    }
+
+    .video-container {
+        max-width: 350px;
+    }
+
+    .about-text {
+        max-width: 500px;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        left: 1.5rem;
+        top: 1.5rem;
+    }
+
+    .education-cards {
+        width: 60%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .education-card {
+        max-width: 600px;
+        padding: 1.5em;
+        height: 80vh;
+        margin-bottom: 2vh;
+    }
+
+    .education-card .card-title {
+        font-size: 1.8rem;
+    }
+
+    .education-card .card-title span {
+        font-size: 1.3rem;
+        color: #D3D8E0;
+    }
+
+    .education-card .card-text {
+        font-size: 1.1rem;
+    }
+
+    .education-card img {
+        max-width: 25%;
+        max-height: 20%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/* Tablet View (768px to 1023px) */
+@media (max-width: 1023px) {
+    .nav {
+        height: 70px;
+        padding: 0 1.5em;
+        justify-content: space-between;
+        overflow: hidden; /* Contain the menu */
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 2001;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background: var(--background--colour);
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        z-index: 2000; /* Higher z-index when active */
+        transform: translateY(0);
+    }
+
+    .items-left, .item-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0;
+    }
+
+    a {
+        font-size: 14px;
+        padding: 0.5em 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        padding: 0.5em;
+        top: 15px;
+        z-index: 500;
+    }
+
+    .container {
+        min-height: 70vh;
+    }
+
+    .hero-video-container {
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 2em 1em;
+        gap: 1.5em;
+        align-items: center;
+    }
+
+    .video-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .video-container {
+        max-width: 100%;
+        width: 50%;
+    }
+
+    .about-text {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .education-section .container {
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem;
+        opacity: 0;
+    }
+
+    .education-cards {
+        width: 70%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .education-card {
+        max-width: 500px;
+        padding: 1.2em;
+        height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2vh;
+    }
+
+    .education-card .card-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .education-card .card-title span {
+        font-size: 1.2rem;
+        color: #D3D8E0;
+    }
+
+    .education-card .card-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .education-card img {
+        max-width: 30%;
+        max-height: 15%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+/* Mobile View (below 767px) */
+@media (max-width: 767px) {
+    .nav {
+        height: 60px;
+        padding: 0 1em;
+        justify-content: space-between;
+        overflow: hidden; /* Contain the menu */
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 2001;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background: var(--background--colour);
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        z-index: 2000; /* Higher z-index when active */
+        transform: translateY(0);
+    }
+
+    .items-left, .item-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5em 0;
+    }
+
+    a {
+        font-size: 12px;
+        padding: 0.5em 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        padding: 0.3em;
+        top: 15px;
+        z-index: 500;
+    }
+
+    .container {
+        min-height: 60vh;
+    }
+
+    .hero-video-container {
+        width: 95%;
+        max-width: 500px;
+    }
+
+    .content {
+        padding: 1.5em 0.5em;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .video-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .video-container {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .about-text {
+        max-width: 95%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 0.5em;
+        text-align: center;
+    }
+
+    .education-section .container {
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0.5rem;
+        opacity: 0;
+    }
+
+    .education-cards {
+        width: 80%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .education-card {
+        max-width: 90%;
+        padding: 1em;
+        height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2vh;
+    }
+
+    .education-card .card-title {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .education-card .card-title span {
+        font-size: 1rem;
+        color: #D3D8E0;
+    }
+
+    .education-card .card-text {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .education-card img {
+        max-width: 40%;
+        max-height: 10%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
