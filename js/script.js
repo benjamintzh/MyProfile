@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: "top 80%",
                     end: "bottom 20%",
                     toggleActions: "restart none none none",
-                    markers: true,
+                    markers: false,
                 },
                 delay: element.classList.contains('delay-1') ? 0.1 :
                        element.classList.contains('delay-2') ? 0.2 :
