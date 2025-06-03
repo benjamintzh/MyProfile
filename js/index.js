@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(SplitText, ScrollTrigger, MotionPathPlugin);
 
+    ScrollTrigger.normalizeScroll(true);
+
     // Disable scrolling during preloader
     document.body.style.overflow = 'hidden';
 
