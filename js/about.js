@@ -44,15 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: ".about-text",
-                    start: "top 90%", 
-                    end: "bottom 80%", 
+                    start: "top bottom", // More forgiving start position
+                    end: "bottom center", // Adjusted end position
                     scrub: 0.5,
-                    markers: false,
-                    invalidateOnRefresh: true,
+                    markers: false, // Set to true for debugging
+                    invalidateOnRefresh: true, // Recalculate on viewport changes
                     onEnter: () => console.log("Text animation entered"),
                     onLeave: () => console.log("Text animation left"),
-                    onRefresh: () => {
-                        if (ScrollTrigger.pos(aboutText) >= ScrollTrigger.start) {
+                    onRefresh: (self) => {
+                        // Ensure text is visible if in or past viewport on load
+                        if (ScrollTrigger.isInViewport(aboutText) || self.progress > 0) {
                             gsap.set(mySplitText.lines, { y: 0, opacity: 1 });
                         }
                     }
