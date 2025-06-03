@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: ".about-text",
                 start: "top 90%",
                 end: "bottom 80%",
-                scrub: 0.5,
+                scrub: false,
                 markers: false
             }
         }
