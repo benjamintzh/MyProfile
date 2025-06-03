@@ -29,7 +29,7 @@
 }
 
 .hamburger {
-    display: none; /* Hidden by default on desktop */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -75,7 +75,7 @@ a {
     transform: translateX(-50%);
     font-family: "Cosi Times";
     padding: 1em;
-    z-index: 500; /* Lowered to avoid overlapping the menu */
+    z-index: 500;
     font-size: 2rem;
 }
 
@@ -117,7 +117,7 @@ a {
     width: 100%;
     max-width: 400px;
     aspect-ratio: 4/5;
-    object-fit: cover;
+    object-fit: justify;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -169,7 +169,7 @@ a {
     flex-direction: column;
     width: 50%;
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 10rem;
     margin-left: auto;
 }
 
@@ -222,6 +222,221 @@ a {
     margin-bottom: 1em;
 }
 
+.achievement-section {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background--colour);
+    position: relative;
+    overflow: visible;
+}
+
+.achievement-section .container {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+}
+
+.achievement-list {
+    list-style: none;
+    width: 50%;
+    padding: 12rem 0 2rem 0;
+    text-align: left;
+}
+
+.achievement-item {
+    position: relative;
+    padding: 1.5rem 0 1.5rem 2rem;
+    border-left: 2px solid var(--Ftext--colour);
+    margin-bottom: 2rem;
+}
+
+.achievement-item:hover {
+    border-left-color: var(--Stext--colour);
+}
+
+.achievement-title {
+    color: var(--Ftext--colour);
+    font-family: "HK Guise";
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.achievement-title span {
+    font-size: 1.3rem;
+    color: #D3D8E0;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.achievement-text {
+    color: var(--Stext--colour);
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.skills-section {
+    width: 100%;
+    height: 100vh;
+    background: var(--background--colour);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-section .container {
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+}
+
+.skills-section .section-title {
+    top: 6rem;
+}
+
+.skills-cards {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    padding: 10rem 2rem 2rem 2rem;
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #2A3235;
+    border-radius: 15px;
+    padding: 2em;
+    width: 300px;
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card .skill-icon {
+    color: var(--Ftext--colour);
+    margin-bottom: 1rem;
+}
+
+.skill-card .card-title {
+    color: var(--Ftext--colour);
+    font-family: "HK Guise";
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+}
+
+.skill-card .card-text {
+    color: var(--Stext--colour);
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.footer {
+    width: 100%;
+    min-height: 40vh;
+    background: #1A1A1A;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 2em 0;
+}
+
+.footer-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.footer-nav {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    order: 2;
+}
+
+.footer-nav a {
+    color: #FFFFFF;
+    font-family: "HK Guise";
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #D3D8E0;
+}
+
+.footer-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 1;
+}
+
+.footer-info p {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.footer-info i {
+    margin-right: 0.6em;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+.footer-info a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #D3D8E0;
+}
+
+.footer-copyright {
+    text-align: center;
+    width: 100%;
+    padding-top: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #BFC9D9;
+}
+
 /* Laptop View (1024px to 1279px) */
 @media (max-width: 1279px) {
     .nav {
@@ -230,12 +445,12 @@ a {
     }
 
     a {
-        font-size: 11px;
+        font-size: 15px;
         padding: 0 0.8em;
     }
 
     .logo {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding: 0.8em;
         z-index: 500;
     }
@@ -247,11 +462,11 @@ a {
     .hero-video-container {
         top: 0;
         left: 0;
-        width: 100vw; 
-        height: 100vh; 
-        aspect-ratio: unset; 
-        object-fit: cover; 
-        box-shadow: none; /* Optional: Remove shadow for full-screen video */
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: unset;
+        object-fit: cover;
+        box-shadow: none;
     }
 
     .content {
@@ -307,6 +522,67 @@ a {
         height: auto;
         object-fit: contain;
     }
+
+    .achievement-list {
+        width: 60%;
+        padding: 10rem 0 1.5rem 0;
+    }
+
+    .achievement-item {
+        padding: 1.2rem 0 1.2rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .achievement-title {
+        font-size: 1.6rem;
+    }
+
+    .achievement-title span {
+        font-size: 1.2rem;
+    }
+
+    .achievement-text {
+        font-size: 1rem;
+    }
+
+    .skills-section .section-title {
+        top: 4rem;
+    }
+
+    .skills-cards {
+        gap: 1.5rem;
+        padding: 8rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .skill-card {
+        width: 250px;
+        min-width: 250px;
+        padding: 1.5em;
+    }
+
+    .skill-card .card-title {
+        font-size: 1.6rem;
+    }
+
+    .skill-card .card-text {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        width: 85%;
+    }
+
+    .footer-nav a {
+        font-size: 1.1rem;
+    }
+
+    .footer-info p {
+        font-size: 1rem;
+    }
+
+    .footer-info i {
+        font-size: 1rem;
+    }
 }
 
 /* Tablet View (768px to 1023px) */
@@ -315,7 +591,7 @@ a {
         height: 70px;
         padding: 0 1.5em;
         justify-content: space-between;
-        overflow: hidden; /* Contain the menu */
+        overflow: hidden;
     }
 
     .hamburger {
@@ -340,7 +616,7 @@ a {
 
     .menu.active {
         display: flex;
-        z-index: 2000; /* Higher z-index when active */
+        z-index: 2000;
         transform: translateY(0);
     }
 
@@ -351,7 +627,7 @@ a {
         margin: 1em 0;
     }
 
-    a {
+    .a {
         font-size: 14px;
         padding: 0.5em 0;
     }
@@ -368,33 +644,49 @@ a {
     }
 
     .hero-video-container {
-        width: 90%;
-        max-width: 800px;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: unset;
+        object-fit: cover;
+        box-shadow: none;
     }
 
     .content {
         flex-direction: column;
         padding: 2em 1em;
-        gap: 1.5em;
+        gap: 2em;
         align-items: center;
+        min-height: auto;
     }
 
     .video-section {
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-top: 10vh;
     }
 
     .video-container {
         max-width: 100%;
-        width: 50%;
+        width: 40%;
     }
 
     .about-text {
         max-width: 100%;
-        font-size: 1rem;
-        line-height: 2;
-        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0 0.5em;
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 0 auto;
+    }
+
+    .about-text p {
+        margin: 0;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .education-section .container {
@@ -406,7 +698,7 @@ a {
         left: 50%;
         transform: translateX(-50%);
         top: 1rem;
-        opacity: 0;
+        opacity: 1;
     }
 
     .education-cards {
@@ -452,6 +744,73 @@ a {
         margin-right: auto;
         display: block;
     }
+
+    .achievement-section .container {
+        align-items: center;
+    }
+
+    .achievement-list {
+        width: 100%;
+        padding: 6rem 0 1rem 0;
+    }
+
+    .achievement-item {
+        padding: 1rem 0 1rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-title {
+        font-size: 1.4rem;
+    }
+
+    .achievement-title span {
+        font-size: 1.1rem;
+    }
+
+    .achievement-text {
+        font-size: 0.9rem;
+    }
+
+    .skills-section .section-title {
+        top: 1rem;
+        opacity: 1;
+    }
+
+    .skills-cards {
+        gap: 1rem;
+        padding: 6rem 1rem 1rem 1rem;
+    }
+
+    .skill-card {
+        width: 200px;
+        min-width: 200px;
+        padding: 1.2em;
+    }
+
+    .skill-card .card-title {
+        font-size: 1.4rem;
+    }
+
+    .skill-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-container {
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .footer-nav a {
+        font-size: 1rem;
+    }
+
+    .footer-info p {
+        font-size: 0.9rem;
+    }
+
+    .footer-info i {
+        font-size: 0.9rem;
+    }
 }
 
 /* Mobile View (below 767px) */
@@ -460,7 +819,7 @@ a {
         height: 60px;
         padding: 0 1em;
         justify-content: space-between;
-        overflow: hidden; /* Contain the menu */
+        overflow: hidden;
     }
 
     .hamburger {
@@ -485,7 +844,7 @@ a {
 
     .menu.active {
         display: flex;
-        z-index: 2000; /* Higher z-index when active */
+        z-index: 2000;
         transform: translateY(0);
     }
 
@@ -509,37 +868,40 @@ a {
     }
 
     .container {
-        min-height: 60vh;
-    }
-
-    .hero-video-container {
-        width: 95%;
-        max-width: 500px;
+        min-height: 100vh;
     }
 
     .content {
         padding: 1.5em 0.5em;
-        gap: 1em;
+        gap: 4em;
         align-items: center;
+        min-height: auto;
     }
 
     .video-section {
+        margin-top: 10%;
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .video-container {
-        width: 90%;
-        max-width: 300px;
+    .hero-video-container {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        aspect-ratio: unset;
+        object-fit: cover;
+        box-shadow: none;
     }
 
     .about-text {
-        max-width: 95%;
+        max-width: 100%;
         font-size: 0.9rem;
         line-height: 1.5;
         padding: 0 0.5em;
-        text-align: center;
+        text-align: justify;
+        margin: 0 auto;
     }
 
     .education-section .container {
@@ -550,8 +912,8 @@ a {
         font-size: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
-        top: 0.5rem;
-        opacity: 0;
+        top: 0.8rem;
+        opacity: 1;
     }
 
     .education-cards {
@@ -569,7 +931,7 @@ a {
         height: 50vh;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
     }
 
     .education-card .card-title {
@@ -588,13 +950,93 @@ a {
     }
 
     .education-card img {
-        max-width: 40%;
-        max-height: 10%;
+        max-width: 50%;
+        max-height: 25%;
         width: auto;
         height: auto;
         object-fit: contain;
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    .achievement-section .container {
+        align-items: center;
+    }
+
+    .achievement-list {
+        width: 100%;
+        padding: 5rem 0 0.8rem 0;
+    }
+
+    .achievement-item {
+        padding: 0.8rem 0 0.8rem 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .achievement-title {
+        font-size: 1.2rem;
+    }
+
+    .achievement-title span {
+        font-size: 0.9rem;
+    }
+
+    .achievement-text {
+        font-size: 0.8rem;
+    }
+
+    .skills-section .section-title {
+        top: 0.8rem;
+        opacity: 1;
+    }
+
+    .skills-cards {
+        gap: 0.8rem;
+        padding: 5rem 0.8rem 0.8rem 0.8rem;
+    }
+
+    .skill-card {
+        width: 180px;
+        min-width: 180px;
+        padding: 1em;
+    }
+
+    .skill-card .card-title {
+        font-size: 1.2rem;
+    }
+
+    .skill-card .card-text {
+        font-size: 0.8rem;
+    }
+
+    .footer-container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-nav a {
+        font-size: 1rem;
+    }
+
+    .footer-info {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 1.5em;
+    }
+
+    .footer-info p {
+        font-size: 0.9rem;
+    }
+
+    .footer-info i {
+        font-size: 0.9rem;
     }
 }
