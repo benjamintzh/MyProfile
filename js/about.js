@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => { 
     gsap.registerPlugin(ScrollTrigger, SplitText);
 
+    // Normalize scroll for iOS Safari
+    ScrollTrigger.normalizeScroll(true);
+
     // Toggle Menu Functionality
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
@@ -10,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('active');
     });
 
-    // Existing logo animation with dynamic trigger
+    // Logo animation with dynamic trigger
     ScrollTrigger.create({
         animation: gsap.from(".logo", {
             y: "50vh",
@@ -24,31 +27,51 @@ document.addEventListener('DOMContentLoaded', () => {
         markers: false
     });
 
-    // Existing line-by-line text reveal animation with scrub
+    // Line-by-line text reveal animation with scrub
     const aboutText = document.querySelector(".about-text p");
-    const mySplitText = new SplitText(aboutText, { type: "lines", linesClass: "reveal-line" });
-    gsap.set(mySplitText.lines, { overflow: "hidden" });
+    if (aboutText) {
+        const mySplitText = new SplitText(aboutText, { type: "lines", linesClass: "reveal-line" });
+        gsap.set(mySplitText.lines, { overflow: "hidden", y: 30, opacity: 0 });
 
-    gsap.fromTo(
-        mySplitText.lines,
-        { y: 30, opacity: 0 },
-        {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".about-text",
-                start: "top 90%",
-                end: "bottom 80%",
-                scrub: 0.5,
-                markers: false
+        gsap.fromTo(
+            mySplitText.lines,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".about-text",
+                    start: "top 90%", 
+                    end: "bottom 80%", 
+                    scrub: 0.5,
+                    markers: false,
+                    invalidateOnRefresh: true,
+                    onEnter: () => console.log("Text animation entered"),
+                    onLeave: () => console.log("Text animation left"),
+                    onRefresh: () => {
+                        if (ScrollTrigger.pos(aboutText) >= ScrollTrigger.start) {
+                            gsap.set(mySplitText.lines, { y: 0, opacity: 1 });
+                        }
+                    }
+                }
             }
-        }
-    );
+        );
 
-    // Existing video animation: Slide with Rotation
+        // Handle window resize and revert SplitText
+        window.addEventListener("resize", () => {
+            mySplitText.revert();
+            mySplitText.split({ type: "lines", linesClass: "reveal-line" });
+            gsap.set(mySplitText.lines, { overflow: "hidden", y: 30, opacity: 0 });
+            ScrollTrigger.refresh();
+        });
+    } else {
+        console.error("Error: .about-text p not found");
+    }
+
+    // Video animation: Slide with Rotation
     gsap.fromTo(
         ".video-container",
         { x: -200, rotation: -10, opacity: 0 },
@@ -63,27 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 start: "top 95%",
                 end: "top 50%",
                 scrub: 0.5,
-                markers: false
+                markers: false,
+                invalidateOnRefresh: true
             }
         }
     );
 
     // Education Section Animations
-    // Pin the section title at the top-left
     ScrollTrigger.create({
         trigger: ".education-section",
         start: "top top",
         end: "bottom top",
         pin: ".section-title",
         pinSpacing: false,
-        markers: false
+        markers: false,
+        invalidateOnRefresh: true
     });
 
-    // Handle window resize
-    window.addEventListener("resize", () => {
-        mySplitText.revert();
-        mySplitText.split({ type: "lines", linesClass: "reveal-line" });
-        gsap.set(mySplitText.lines, { overflow: "hidden", y: 30, opacity: 0 });
+    // Refresh ScrollTrigger on load to handle iOS Safari quirks
+    window.addEventListener("load", () => {
         ScrollTrigger.refresh();
     });
 });
