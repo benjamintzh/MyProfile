@@ -1,144 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Benjamin's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="container-wrapper">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Benjamin</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="nav">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu">
+            <div class="items-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
             </div>
-        </nav>
-        <div class="hero-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-md-start text-center split">
-                        <p class="welcome-heading">Welcome to My Portfolio</p>
-                        <h1 class="delay-1">Hello I'm Benjamin</h1>
-                        <h3 class="delay-1">Software Engineering Student</h3>
-                        <a href="projects.html" class="btn btn-dark btn-lg mt-3">Explore My Work</a>
-                        <div class="social-links mt-4">
-                            <a href="assets/cv.pdf" class="btn btn-custom-download">Download CV</a>
-                            <a href="https://github.com/benjamintzh" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/benjamin-tan-zhi-hong-350008281/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <div class="image-wrapper">
-                            <img src="images/yeonjun.png" alt="Profile Image" class="profile-image" id="content">
-                            <svg class="rotating-circle" width="100%" height="100%" viewBox="0 0 550 550">
-                                <defs>
-                                    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#f9f871;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#4bbc8e;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle id="circle-content" class="circle-path" cx="275" cy="275" r="225" 
-                                        fill="none" stroke="url(#circleGradient)" stroke-width="4" stroke-dasharray="20,50,40,30" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+            <div class="item-right">
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
-        
-        <div class="container skills-section">
-            <div class="row text-center">
-                <div class="col-12 scroll-animate delay-3">
-                    <h2>My Skills</h2>
-                    <p>Explore the technologies and tools I specialize in.</p>
-                </div>
-            </div>
-            <div class="row mt-4 skills-container">
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-1">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-code fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">Java & Spring Boot</h5>
-                            <p class="card-text">Crafting robust backend systems with Spring Boot for scalable applications.</p>
-                        </div>
+    </div>
+    <div class="preloader">
+        <div class="preloader-content">
+            <svg class="preloader-svg" width="300" height="286" viewBox="0 0 300 286"
+                preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0,286) scale(0.1,-0.1)" fill="none" stroke="#E6E8EA" stroke-width="4">
+                    <path class="path-main"
+                        d="M2424 2484 c-7 -12 -26 -18 -65 -23 -3 -1 -21 -14 -40 -31 -19 -16 -39 -34 -46 -40 -7 -5 -18 -10 -25 -10 -7 0 -19 -9 -26 -21 -7 -11 -18 -19 -24 -17 -16 6 -58 -36 -58 -56 0 -10 -13 -21 -29 -27 -18 -6 -28 -16 -25 -24 3 -7 -6 -25 -20 -40 -14 -15 -26 -36 -26 -46 0 -11 -5 -19 -11 -19 -6 0 -9 -6 -6 -12 2 -7 -9 -28 -24 -45 -16 -18 -33 -50 -39 -72 -5 -21 -17 -44 -25 -51 -8 -7 -15 -21 -15 -30 0 -10 -6 -20 -12 -23 -10 -3 -10 -7 -1 -17 19 -20 42 -4 62 44 11 24 24 45 31 48 6 2 12 17 14 33 2 17 9 29 15 27 7 -1 17 11 22 28 6 16 15 30 20 30 5 0 9 11 9 25 0 15 13 39 33 59 17 18 43 51 57 74 14 23 39 48 57 57 18 9 35 20 38 25 4 6 11 8 16 5 5 -4 12 1 15 9 3 9 11 16 18 16 6 0 27 13 46 30 19 16 43 29 52 30 9 0 18 5 20 12 3 7 26 13 59 13 60 1 104 -21 114 -58 4 -12 13 -35 20 -52 10 -22 13 -85 13 -235 -1 -200 5 -278 22 -310 12 -22 11 -120 -1 -120 -6 0 -9 -8 -7 -17 1 -10 -1 -24 -6 -32 -5 -8 -10 -53 -11 -100 -1 -71 -6 -96 -29 -144 -20 -43 -31 -57 -42 -53 -9 3 -18 6 -20 6 -2 0 -4 6 -4 14 0 8 -9 18 -20 21 -11 3 -20 11 -20 16 0 5 -5 9 -11 9 -6 0 -22 14 -36 30 -27 33 -48 38 -56 16 -4 -9 8 -26 27 -43 52 -43 79 -63 88 -63 4 0 8 -7 8 -15 0 -8 16 -21 35 -29 19 -8 35 -22 35 -30 0 -8 16 -31 36 -50 45 -44 74 -97 67 -124 -5 -20 29 -66 41 -55 3 4 6 -3 6 -15 0 -13 -6 -22 -15 -22 -16 0 -16 -3 -19 -57 -1 -37 9 -44 19 -12 5 16 9 18 15 9 5 -8 10 16 12 56 4 90 0 124 -17 124 -7 0 -16 16 -19 35 -4 19 -11 35 -15 35 -5 0 -12 11 -15 25 -4 16 -11 22 -21 19 -10 -4 -15 0 -15 15 0 12 -9 30 -20 41 -25 25 -25 37 1 50 11 7 19 14 16 16 -3 3 3 22 13 42 11 21 15 41 10 46 -5 5 -2 15 6 23 8 8 14 32 14 54 0 25 5 39 13 39 7 0 13 15 14 38 2 66 15 142 24 136 5 -3 9 0 9 5 0 6 -4 11 -9 11 -5 0 -11 23 -15 50 -5 34 -11 50 -21 50 -8 0 -15 7 -15 16 0 13 3 14 13 5 11 -9 14 -3 12 34 -2 25 -7 51 -13 58 -12 15 -19 157 -8 175 4 7 5 26 1 42 -4 16 -1 45 6 65 11 29 11 38 1 44 -13 8 -20 28 -21 63 -1 9 -7 23 -15 30 -7 8 -17 28 -20 46 -6 24 -17 35 -47 49 -21 9 -39 20 -39 25 0 4 -13 8 -30 8 -16 0 -30 -5 -30 -11 0 -5 -5 -7 -11 -4 -20 13 -56 12 -65 -1z" />
+                    <path class="path-small1"
+                        d="M1140 2461 c0 -16 5 -42 10 -57 10 -26 12 -26 28 -10 14 14 15 18 3 25 -7 5 -11 13 -8 17 7 13 -10 54 -23 54 -5 0 -10 -13 -10 -29z" />
+                    <path class="path-small2"
+                        d="M550 2395 c-8 -2 -36 -7 -62 -10 -34 -4 -48 -11 -48 -22 0 -8 -8 -17 -17 -20 -19 -5 -57 -77 -68 -128 -10 -44 -9 -220 0 -290 5 -33 8 -64 7 -68 -1 -4 2 -16 8 -26 5 -11 12 -41 15 -68 3 -26 8 -70 12 -98 3 -27 5 -67 4 -88 -1 -25 3 -39 13 -43 10 -4 12 -16 9 -44 -7 -48 27 -210 49 -235 14 -15 9 -83 -7 -99 -8 -8 -15 -22 -15 -30 0 -9 -3 -16 -7 -16 -12 0 -44 -61 -37 -71 3 -5 -1 -9 -8 -9 -19 0 -34 -45 -37 -113 -2 -52 -1 -57 18 -57 14 0 21 -6 21 -20 0 -11 7 -20 15 -20 9 0 27 -11 40 -24 13 -14 33 -27 44 -31 10 -3 22 -12 25 -20 4 -10 20 -15 52 -15 41 0 46 -2 41 -20 -3 -11 -1 -18 3 -15 5 3 10 0 12 -6 2 -6 22 -12 45 -13 22 -1 48 -10 58 -19 9 -9 24 -18 33 -19 9 0 22 -2 27 -3 6 -2 18 -3 28 -4 10 0 15 -5 12 -11 -3 -5 2 -11 12 -11 51 -3 86 -10 105 -20 12 -6 80 -22 152 -35 72 -12 140 -25 151 -28 24 -7 87 -20 175 -36 36 -6 130 -11 210 -10 187 2 184 2 191 13 7 10 119 27 119 18 0 -3 32 -7 70 -8 39 -1 70 1 70 6 0 4 -20 18 -45 30 -40 20 -58 22 -143 19 -53 -2 -100 -7 -103 -12 -11 -15 -259 -19 -361 -5 -54 7 -98 15 -98 19 0 4 -25 10 -56 12 -31 3 -59 9 -62 15 -4 6 -47 16 -96 22 -50 7 -94 15 -98 17 -5 3 -34 8 -66 10 -31 3 -59 10 -60 15 -2 5 -8 6 -14 3 -10 -6 -78 10 -110 27 -11 5 -20 5 -24 -2 -5 -8 -10 -6 -16 5 -5 9 -19 16 -31 17 -21 0 -21 1 -2 8 15 6 8 9 -27 13 -26 3 -54 13 -63 22 -9 9 -30 16 -46 16 -22 0 -32 6 -39 24 -5 14 -19 26 -32 28 -15 2 -24 11 -26 26 -2 15 -9 22 -17 19 -21 -9 -56 40 -51 70 3 14 10 31 15 36 7 7 6 16 -5 29 -16 16 -15 18 2 25 25 9 34 23 34 54 0 18 8 29 25 37 14 6 25 18 25 27 0 8 4 15 9 15 5 0 11 14 15 30 3 18 12 30 21 30 8 0 15 7 15 15 0 8 -4 15 -10 15 -5 0 -10 4 -10 9 0 4 11 6 23 4 19 -4 27 2 41 31 9 20 23 36 31 36 8 0 15 9 15 20 0 11 7 23 15 26 15 6 21 35 9 46 -12 12 -44 -5 -44 -24 0 -11 -8 -22 -19 -25 -11 -3 -24 -17 -29 -32 -11 -32 -38 -61 -56 -61 -7 0 -20 6 -29 13 -14 10 -15 18 -8 45 5 17 6 32 1 32 -16 0 -23 38 -31 165 -9 134 -16 199 -26 225 -5 14 -12 64 -15 100 0 8 -4 20 -8 25 -7 10 -14 165 -13 263 1 29 7 60 13 67 7 8 9 22 6 31 -6 16 25 51 91 101 38 29 72 28 125 -4 21 -13 41 -23 44 -23 4 0 23 -16 42 -36 24 -25 37 -32 42 -24 5 9 9 9 14 1 4 -6 0 -14 -9 -17 -13 -5 -11 -9 11 -20 14 -8 34 -14 44 -14 11 0 20 -10 25 -27 11 -45 58 -80 67 -51 3 9 6 9 12 0 4 -7 3 -12 -2 -12 -6 0 -8 -9 -5 -20 3 -11 10 -20 15 -20 6 0 5 -6 -2 -14 -9 -12 -5 -19 24 -38 20 -13 34 -28 32 -35 -3 -6 6 -19 20 -27 13 -9 24 -24 24 -32 0 -11 6 -15 20 -11 15 4 20 0 20 -16 0 -37 13 -49 35 -34 31 23 -3 97 -56 121 -11 4 -11 7 -1 12 6 3 12 13 12 22 0 8 -3 12 -7 9 -9 -9 -32 24 -33 48 -1 20 -1 20 -9 0 -8 -19 -8 -19 -19 2 -8 14 -8 23 -2 25 6 2 -7 14 -28 27 -21 13 -44 37 -50 53 -6 16 -20 32 -31 35 -12 3 -21 11 -21 18 0 8 -9 17 -20 20 -11 3 -20 13 -20 21 0 8 -9 14 -19 14 -10 0 -21 7 -25 15 -3 8 -12 15 -20 15 -8 0 -27 11 -41 26 -14 14 -30 22 -35 19 -6 -3 -10 -2 -10 4 0 15 -86 34 -120 26z" />
+                    <path class="path-small3" d="M1177 2374 c-9 -10 4 -34 19 -34 8 0 14 9 14 20 0 19 -19 27 -33 14z" />
+                    <path class="path-small4"
+                        d="M1330 2320 c-13 -24 -1 -31 44 -23 27 4 36 10 34 22 -5 24 -65 25 -78 1z" />
+                    <path class="path-small5"
+                        d="M1130 2229 c-8 -4 -27 -10 -42 -14 -16 -3 -28 -10 -28 -15 0 -20 100 -4 107 17 5 14 -18 22 -37 12z" />
+                    <path class="path-small6"
+                        d="M1235 2180 c-3 -6 4 -14 17 -19 29 -11 35 -6 18 14 -14 17 -26 19 -35 5z" />
+                    <path class="path-small7"
+                        d="M1264 2125 c-12 -31 23 -48 45 -21 10 12 8 17 -8 25 -26 14 -31 14 -37 -4z" />
+                    <path class="path-small8"
+                        d="M2310 1974 c-14 -35 -13 -42 10 -54 11 -6 17 -17 14 -24 -4 -10 3 -16 18 -18 18 -2 24 -10 26 -36 3 -26 -1 -34 -22 -42 -16 -6 -24 -16 -23 -30 1 -16 8 -20 34 -20 38 0 53 21 33 45 -13 16 -7 30 13 30 7 0 13 13 15 28 3 22 -1 30 -17 34 -12 3 -21 10 -21 15 0 5 -9 6 -21 3 -18 -6 -20 -4 -14 14 9 30 -4 81 -21 81 -8 0 -19 -12 -24 -26z" />
+                    <path class="path-small9"
+                        d="M706 1932 c-3 -3 -6 -17 -6 -32 0 -21 4 -26 23 -25 30 2 37 50 8 58 -11 2 -22 2 -25 -1z" />
+                    <path class="path-small10"
+                        d="M2257 1913 c-4 -3 -7 -14 -7 -24 0 -9 -5 -19 -12 -21 -6 -2 -13 -13 -14 -24 -2 -14 5 -23 27 -31 30 -12 59 -8 59 7 0 5 9 10 20 12 15 2 17 7 10 18 -8 12 -13 13 -29 3 -19 -12 -61 -7 -61 8 0 4 6 12 13 16 20 12 29 43 13 43 -7 0 -16 -3 -19 -7z" />
+                    <path class="path-small11"
+                        d="M618 1902 c-21 -4 -21 -3 -8 -37 8 -21 13 -25 24 -16 12 10 16 46 5 54 -2 2 -12 2 -21 -1z" />
+                    <path class="path-small12"
+                        d="M1335 1888 c-38 -5 -81 -17 -95 -27 -26 -17 -90 -17 -90 0 0 5 -7 9 -16 9 -8 0 -13 -4 -9 -9 3 -5 1 -12 -5 -16 -5 -3 -10 -14 -10 -24 0 -13 -10 -20 -31 -25 -16 -3 -37 -12 -45 -21 -8 -8 -33 -19 -54 -25 -22 -6 -40 -14 -40 -19 0 -5 -18 -21 -40 -36 -27 -19 -40 -35 -40 -51 0 -18 4 -22 18 -17 9 4 22 12 28 17 6 6 22 18 34 26 12 8 33 23 45 33 13 9 28 17 33 17 5 0 12 7 16 15 3 8 16 15 30 15 13 0 26 6 29 14 3 7 24 16 47 19 23 3 52 14 63 25 17 15 42 21 110 25 48 3 93 10 100 14 6 4 62 8 124 9 117 2 239 -17 258 -41 9 -11 65 -25 109 -26 10 0 20 -9 23 -20 3 -12 14 -19 28 -19 13 0 30 -7 39 -15 8 -8 21 -15 30 -15 8 0 20 -9 26 -20 13 -24 68 -28 77 -5 7 20 -24 55 -49 55 -23 0 -75 26 -80 40 -2 6 -18 11 -36 13 -28 2 -34 7 -39 30 -6 28 -28 37 -36 15 -4 -10 -7 -10 -18 0 -7 6 -25 12 -40 12 -15 0 -31 5 -35 11 -3 6 -14 9 -24 6 -11 -3 -27 1 -38 8 -22 16 -288 18 -397 3z" />
+                    <path class="path-small13"
+                        d="M734 1839 c-3 -6 -3 -13 0 -16 3 -3 1 -12 -4 -18 -18 -21 12 -36 41 -21 13 7 29 13 34 14 16 3 12 35 -5 38 -8 2 -25 5 -37 8 -13 3 -25 0 -29 -5z" />
+                    <path class="path-small14"
+                        d="M581 1773 c-14 -64 -20 -143 -10 -148 12 -8 40 6 33 16 -10 16 7 49 25 49 9 0 25 14 34 30 10 17 25 30 33 30 9 0 12 8 10 23 -3 12 -5 24 -5 26 -1 2 -9 -3 -18 -12 -25 -21 -58 -26 -59 -7 -1 8 -2 21 -3 28 0 6 -7 12 -15 12 -9 0 -18 -19 -25 -47z" />
+                    <path class="path-small15"
+                        d="M2270 1408 c0 -6 -3 -9 -6 -5 -3 3 -17 2 -30 -3 -15 -6 -26 -6 -30 1 -4 7 -12 4 -24 -6 -9 -8 -41 -18 -70 -22 -30 -3 -54 -12 -57 -20 -3 -8 -23 -23 -44 -34 l-39 -19 -31 22 -31 23 -30 -35 c-32 -38 -78 -139 -83 -180 -1 -14 -3 -37 -4 -52 -1 -21 -6 -28 -21 -28 -19 0 -20 -7 -22 -97 -1 -54 -2 -111 -3 -128 -1 -43 16 -95 31 -95 7 0 17 -6 21 -14 4 -8 35 -23 68 -35 33 -11 56 -20 50 -21 -6 0 -6 -3 0 -9 6 -5 34 -12 63 -15 29 -3 59 -12 67 -20 8 -8 20 -17 27 -20 10 -5 10 -8 -2 -13 -15 -6 115 -42 158 -43 12 0 22 -4 22 -10 0 -5 18 -10 39 -10 33 0 47 7 85 45 26 25 51 45 57 45 9 0 4 36 -6 48 -3 3 -49 -34 -80 -65 -32 -33 -99 -30 -207 8 -66 24 -88 36 -88 50 0 22 -19 29 -44 17 -13 -7 -16 -7 -12 1 5 7 -2 9 -22 5 -22 -5 -35 1 -63 27 -18 17 -53 40 -76 50 l-43 18 -1 68 c-3 154 -1 174 20 197 11 12 22 35 25 52 7 58 28 123 42 128 8 3 14 17 14 30 0 29 32 43 75 32 38 -10 68 2 90 33 17 26 28 30 104 41 117 16 123 15 167 -24 78 -71 85 -76 94 -76 13 0 30 -34 32 -67 2 -33 15 -53 34 -53 10 0 14 14 14 49 0 46 -3 52 -41 83 -23 18 -65 56 -94 83 -84 79 -95 86 -95 63z" />
+                    <path class="path-small16"
+                        d="M2111 1269 c-13 -5 -32 -7 -42 -4 -16 5 -19 1 -19 -23 0 -21 -7 -32 -25 -40 -14 -7 -31 -12 -38 -12 -22 0 -67 -50 -67 -74 0 -13 -7 -29 -15 -36 -8 -7 -15 -22 -15 -33 0 -11 -10 -31 -21 -43 -21 -23 -21 -23 -3 -81 10 -32 25 -66 34 -76 8 -9 18 -27 21 -40 3 -13 12 -21 22 -19 10 2 19 -6 23 -22 3 -13 12 -27 20 -30 8 -3 14 -12 14 -21 0 -18 15 -20 32 -2 14 16 58 0 58 -21 0 -7 5 -10 10 -7 15 9 12 19 -15 51 -23 26 -27 27 -36 12 -13 -24 -36 -23 -44 2 -3 11 -12 20 -20 20 -13 0 -25 30 -25 68 0 12 -3 22 -8 22 -4 0 -18 27 -31 60 l-23 61 26 53 c41 84 73 115 128 122 52 7 102 -2 93 -16 -13 -21 6 -49 32 -47 16 1 29 -5 37 -18 14 -25 28 -35 38 -29 4 3 8 -1 8 -8 0 -9 3 -9 10 2 22 35 -34 116 -73 106 -10 -2 -21 2 -24 10 -3 8 -9 12 -13 9 -13 -8 -90 28 -90 42 0 21 39 36 68 25 15 -5 38 -10 52 -10 43 -1 90 -12 90 -21 0 -5 12 -12 26 -15 29 -8 76 -50 87 -78 4 -11 12 -15 22 -12 11 5 13 10 6 17 -7 7 -5 14 7 23 16 12 15 13 -4 14 -11 0 -30 13 -42 30 -18 23 -69 60 -84 60 -17 1 -48 14 -48 21 0 5 -15 8 -32 7 -18 -1 -44 1 -58 5 -14 3 -36 2 -49 -4z" />
+                    <path class="path-small17"
+                        d="M1035 1241 c-9 -15 -14 -13 75 -41 41 -13 91 -32 110 -42 42 -22 66 -23 74 -3 14 37 -19 59 -94 64 -25 2 -50 7 -56 12 -19 15 -101 23 -109 10z" />
+                    <path class="path-small18"
+                        d="M2497 1113 c-15 -14 -7 -35 12 -30 10 2 26 0 35 -5 14 -8 17 -6 14 9 -5 29 -43 45 -61 26z" />
+                    <path class="path-small19"
+                        d="M2080 1055 c0 -8 -7 -15 -15 -15 -8 0 -18 -12 -21 -27 -4 -16 -11 -34 -16 -40 -13 -16 -4 -131 12 -146 9 -9 15 -7 26 7 11 16 11 22 1 29 -7 5 -2 6 13 1 14 -4 31 -15 37 -25 11 -14 23 -16 70 -12 37 3 61 10 69 21 21 29 7 39 -48 32 -82 -11 -145 9 -155 48 -4 18 -1 29 12 38 9 7 14 17 11 22 -3 5 6 7 20 4 23 -4 25 -2 22 37 -2 31 -7 41 -20 41 -10 0 -18 -7 -18 -15z" />
+                    <path class="path-small20"
+                        d="M2445 1048 c-12 -15 -20 -18 -23 -10 -6 19 -22 14 -22 -8 0 -12 5 -17 13 -14 10 4 14 -8 15 -46 0 -27 -3 -50 -9 -50 -5 0 -9 -7 -9 -15 0 -34 -68 -138 -86 -131 -7 3 -14 -1 -17 -7 -2 -7 -41 -25 -86 -42 -44 -16 -81 -35 -81 -41 0 -18 37 -27 78 -19 21 4 46 9 58 10 11 2 33 15 49 29 15 14 32 26 36 26 5 0 6 6 4 13 -3 6 11 23 31 35 34 22 36 27 31 62 -4 32 -1 42 19 59 21 18 23 27 18 62 -4 26 -2 49 6 65 19 34 0 51 -25 22z" />
+                    <path class="path-small21"
+                        d="M2280 1002 c0 -17 5 -29 13 -29 9 0 12 10 9 29 -2 15 -8 28 -13 28 -5 0 -9 -13 -9 -28z" />
+                    <path class="path-small22"
+                        d="M2590 1000 c0 -11 5 -20 10 -20 18 0 11 -69 -9 -89 -11 -11 -17 -21 -15 -24 3 -2 -11 -16 -31 -31 -39 -30 -45 -46 -15 -46 23 0 73 52 101 105 18 32 18 39 5 63 -8 15 -17 35 -20 45 -7 23 -26 22 -26 -3z" />
+                    <path class="path-small23"
+                        d="M2140 991 c0 -38 28 -53 50 -26 10 12 8 16 -15 25 -32 12 -35 12 -35 1z" />
+                    <path class="path-small24"
+                        d="M1534 945 c-4 -8 -10 -12 -15 -9 -5 3 -16 -1 -24 -10 -11 -11 -12 -15 -2 -18 8 -3 6 -10 -7 -24 -19 -19 -19 -19 2 -22 12 -2 22 -8 22 -13 0 -12 27 -12 32 1 2 5 31 10 66 11 57 2 63 4 68 26 7 27 -13 56 -33 48 -8 -3 -24 2 -36 10 -28 19 -66 19 -73 0z" />
+                    <path class="path-small25"
+                        d="M2690 860 c0 -17 -4 -30 -8 -30 -13 0 -162 -129 -169 -146 -3 -8 -2 -22 1 -31 6 -14 22 -1 86 65 43 45 84 96 92 112 7 17 16 30 20 30 14 0 8 18 -7 24 -11 4 -15 -2 -15 -24z" />
+                    <path class="path-small26"
+                        d="M2433 763 c-27 -5 -28 -11 -8 -33 8 -9 15 -30 17 -48 1 -19 8 -32 16 -32 9 0 11 9 6 35 -4 22 -2 41 6 50 11 14 6 36 -8 34 -4 -1 -17 -4 -29 -6z" />
+                </g>
+            </svg>
+            <h1 class="preloader-name">BENJAMIN</h1>
+        </div>
+    </div>
+    <div class="logo-container">
+        <h1 class="logo">Home</h1>
+    </div>
+    <div class="container">
+        <video autoplay loop muted playsinline class="hero-video-container">
+            <source src="video/hero-section.mp4" type="video/mp4">
+            Your Browser Does Not Support The Video Tag.
+        </video>
+    </div>
+    <div class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="images/yeonjun.png" alt="Profile Image" class="profile-image" id="content">
+                        <svg class="rotating-circle" width="100%" height="100%" viewBox="0 0 550 550">
+                            <defs>
+                                <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f9f871;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4bbc8e;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle id="circle-content" class="circle-path" cx="275" cy="275" r="225" fill="none"
+                                stroke="url(#circleGradient)" stroke-width="4" stroke-dasharray="20,50,40,30" />
+                        </svg>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-2">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-desktop fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">Frontend Development</h5>
-                            <p class="card-text">Designing responsive and dynamic UIs with HTML, CSS, JavaScript.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-3">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-tools fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">PC Hardware Maintenance</h5>
-                            <p class="card-text">Diagnosing and repairing PC hardware components for optimal performance.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-4">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-network-wired fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">Remote Troubleshooting</h5>
-                            <p class="card-text">Providing efficient remote support to diagnose and resolve technical issues.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-5">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-server fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">IT Hardware Support</h5>
-                            <p class="card-text">Offering comprehensive support for IT hardware setup, maintenance, and upgrades.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 skill-card scroll-animate delay-6">
-                    <div class="card skill-card-inner">
-                        <div class="card-body">
-                            <i class="fas fa-code fa-3x mb-3 skill-icon"></i>
-                            <h5 class="card-title">C++ Basics</h5>
-                            <p class="card-text">Developing efficient and high-performance applications using fundamental C++ programming.</p>
-                        </div>
+                <div class="hero-text split">
+                    <p class="welcome-heading">Welcome to My Portfolio</p>
+                    <h1 class="delay-1">Hello I'm Benjamin</h1>
+                    <h3 class="delay-1">Software Engineering Student</h3>
+                    <a href="projects.html" class="btn btn-dark btn-lg mt-3">Explore My Work</a>
+                    <div class="social-links mt-4">
+                        <a href="assets/cv.pdf" class="btn btn-custom-download">Download CV</a>
+                        <a href="https://github.com/benjamintzh" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/benjamin-tan-zhi-hong-350008281/" class="social-icon"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p><i class="fas fa-envelope"></i> <a
+                        href="mailto:zhihongbtzh1234@gmail.com">zhihongbtzh1234@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/benjamin-tan-zhi-hong-350008281"
+                        target="_blank">LinkedIn</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/benjamintzh" target="_blank">GitHub</a></p>
+                <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/imzhihong.t/?hl=en"
+                        target="_blank">Instagram</a></p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 Benjamin Tan Zhi Hong. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
